@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: #f2f5f5; color: #172c2b; font: 1rem/1.6 Tahoma, Arial, sans-serif; }
+.container { width: min(100% - 2rem, 64rem); margin-inline: auto; }
+.brand { background: #123733; color: white; padding-block: 1rem; font-size: 1.25rem; font-weight: bold; }
+.brand span { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-inline-end: .4rem; border-radius: .5rem; background: #c8f478; color: #123733; }
+main { padding-block: 2rem 4rem; }
+h1 { margin: 0 0 1.25rem; font-size: clamp(1.6rem, 4vw, 2.5rem); }
+.controls { display: flex; gap: 1rem; align-items: end; padding: 1rem; border: 1px solid #d6e2e0; border-radius: .8rem; background: white; }
+label { flex: 1; font-weight: bold; }
+input, button { min-height: 2.75rem; border: 1px solid #8da8a3; border-radius: .5rem; padding: .45rem .75rem; font: inherit; }
+input { display: block; width: 100%; margin-top: .35rem; color: inherit; }
+button { cursor: pointer; background: #18584f; color: white; }
+button:disabled { opacity: .65; cursor: default; }
+:focus-visible { outline: 3px solid #006cbc; outline-offset: 2px; }
+#message { color: #425b57; }
+table { width: 100%; border-collapse: separate; border-spacing: 0; background: white; border: 1px solid #d6e2e0; border-radius: .8rem; overflow: hidden; }
+th, td { text-align: start; padding: .85rem 1rem; }
+th { background: #deebe7; }
+td { border-block-start: 1px solid #e1eae8; }
+.cell-label { display: none; }
+.status { display: inline-block; border-radius: 1rem; padding: .1rem .65rem; white-space: nowrap; font-size: .875rem; }
+.new { background: #dceafa; color: #164579; }
+.on-way { background: #fff0cd; color: #6d4800; }
+.delivered { background: #dcf1e1; color: #205531; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 42rem) {
+  .controls { align-items: stretch; flex-direction: column; }
+  table, tbody, tr, td { display: block; }
+  table { border: 0; background: transparent; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  tbody tr { padding: .35rem .85rem; margin-block-end: .75rem; background: white; border: 1px solid #d6e2e0; border-radius: .75rem; }
+  td { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; padding: .4rem 0; }
+  td:first-child { border: 0; }
+  .cell-label { display: inline; color: #425b57; }
+}
