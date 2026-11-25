@@ -8,20 +8,38 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <header class="brand"><div class="container"><span aria-hidden="true">و</span> وصّل</div></header>
+  <header class="brand">
+    <div class="container">
+      <span aria-hidden="true">و</span>
+      وصّل
+    </div>
+  </header>
+
   <main class="container">
     <h1>طلبات التوصيل</h1>
+
     <div class="controls">
-      <label for="search">البحث باسم الزبون
+      <label for="search">
+        البحث باسم الزبون
         <input id="search" type="search" placeholder="مثال: أحمد" disabled>
       </label>
       <button id="sort" type="button" disabled>الترتيب: الأحدث أولًا</button>
     </div>
+
     <p id="message" role="status"></p>
     <button id="retry" type="button" hidden>إعادة المحاولة</button>
+
     <table id="orders" hidden>
       <caption class="visually-hidden">قائمة طلبات التوصيل</caption>
-      <thead><tr><th scope="col">رقم الطلب</th><th scope="col">الزبون</th><th scope="col">المبلغ</th><th scope="col">التاريخ</th><th scope="col">الحالة</th></tr></thead>
+      <thead>
+        <tr>
+          <th scope="col">رقم الطلب</th>
+          <th scope="col">الزبون</th>
+          <th scope="col">المبلغ</th>
+          <th scope="col">التاريخ</th>
+          <th scope="col">الحالة</th>
+        </tr>
+      </thead>
       <tbody id="rows"></tbody>
     </table>
   </main>
